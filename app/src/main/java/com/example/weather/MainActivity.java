@@ -42,38 +42,6 @@ public class MainActivity extends AppCompatActivity {
         tvDescription = findViewById(R.id.tvDescription);
         btnGet = findViewById(R.id.btnGet);
 
-
-        //String url = "http://api.openweathermap.org/data/2.5/weather?q=Ottawa&appid=c2aa3620703b8695df8546c19acb32ea&units=Metric";
-        //tvTemp.setText("defrgrewfbersvbg");
-
-//        jor = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
-//            @Override
-//            public void onResponse(JSONObject response) {
-//                try {
-//                    tvTemp.setText("defrgrewfbersvbg");
-//                    JSONObject main_object = response.getJSONObject("main");
-//                    JSONArray jArray = response.getJSONArray("weather");
-//                    JSONObject object = jArray.getJSONObject(0);
-//                    String temp = String.valueOf(main_object.getDouble("temp"));
-//                    String description = object.getString("description");
-//                    String city = response.getString("name");
-//                    tvTemp.setText(temp);
-//                    tvCity.setText(city);
-//                    tvDescription.setText(description);
-//
-//                } catch (JSONException e) {
-//                    e.printStackTrace();
-//                }
-//
-//
-//            }
-//        }, new Response.ErrorListener() {
-//            @Override
-//            public void onErrorResponse(VolleyError error) {
-//                Log.e("Volley", "Error");
-//            }
-//        });
-
         btnGet.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         queue = Volley.newRequestQueue(this);
-        //findWeather();
     }
 
 
